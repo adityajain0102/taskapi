@@ -29,7 +29,7 @@ async function authenticate(req) {
 }
 
 async function getAll(req) {
-
+    console.log("GET ALL USERS", req.query);
     return await User.find().skip(Number(req.query.skip)).limit(Number(req.query.limit)).select('-hash');
 }
 
